@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -71,22 +72,22 @@ const Index = () => {
 
   const projects = [
     {
-      name: "Machakos County Borehole",
-      location: "Machakos, Kenya",
-      description: "200-meter deep borehole with solar pump installation serving 500+ households",
-      image: "https://images.unsplash.com/photo-1506744038136-40eb2168fd21?w=400&h=300&fit=crop"
+      name: "Borehole Drilling Project",
+      location: "Kenya",
+      description: "Professional borehole drilling operation with modern equipment and experienced technicians",
+      image: "/lovable-uploads/8021145f-b4f3-4f35-b615-a6c9a89fe7db.png"
     },
     {
-      name: "Kiambu Farm Water System",
-      location: "Kiambu, Kenya", 
-      description: "Complete water system with 10,000L elevated tank for agricultural irrigation",
-      image: "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=400&h=300&fit=crop"
+      name: "Solar-Powered Water Tank System",
+      location: "Kenya", 
+      description: "Elevated steel water tank with solar panel system for sustainable water storage",
+      image: "/lovable-uploads/162244c4-1299-40a1-8061-05c4f61b93b8.png"
     },
     {
-      name: "Nakuru Community Project",
-      location: "Nakuru, Kenya",
-      description: "Multi-borehole project with solar pumping system for rural community",
-      image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400&h=300&fit=crop"
+      name: "Complete Water Infrastructure",
+      location: "Kenya",
+      description: "Multi-level water storage system with modern infrastructure and solar power integration",
+      image: "/lovable-uploads/a8c85162-e05f-4226-96ca-4bc521b966f1.png"
     }
   ];
 
@@ -239,8 +240,8 @@ const Index = () => {
             <div className="relative">
               <div className="float-animation">
                 <img 
-                  src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=600&h=400&fit=crop" 
-                  alt="Crystal clear water waves - Professional borehole and water solutions"
+                  src="/lovable-uploads/2173bda5-410a-4edb-91c0-4a5a1a393647.png" 
+                  alt="Trans Solar Boreholes team at work - Professional borehole drilling and water solutions"
                   className="rounded-lg shadow-2xl"
                 />
               </div>
