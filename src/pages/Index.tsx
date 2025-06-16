@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -75,19 +74,19 @@ const Index = () => {
       name: "Machakos County Borehole",
       location: "Machakos, Kenya",
       description: "200-meter deep borehole with solar pump installation serving 500+ households",
-      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop"
+      image: "https://images.unsplash.com/photo-1506744038136-40eb2168fd21?w=400&h=300&fit=crop"
     },
     {
       name: "Kiambu Farm Water System",
       location: "Kiambu, Kenya", 
       description: "Complete water system with 10,000L elevated tank for agricultural irrigation",
-      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=400&h=300&fit=crop"
+      image: "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=400&h=300&fit=crop"
     },
     {
       name: "Nakuru Community Project",
       location: "Nakuru, Kenya",
       description: "Multi-borehole project with solar pumping system for rural community",
-      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&h=300&fit=crop"
+      image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400&h=300&fit=crop"
     }
   ];
 
@@ -240,8 +239,8 @@ const Index = () => {
             <div className="relative">
               <div className="float-animation">
                 <img 
-                  src="https://images.unsplash.com/photo-1500673922987-e212871fec22?w=600&h=400&fit=crop" 
-                  alt="Water borehole in beautiful landscape"
+                  src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=600&h=400&fit=crop" 
+                  alt="Crystal clear water waves - Professional borehole and water solutions"
                   className="rounded-lg shadow-2xl"
                 />
               </div>
