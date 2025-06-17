@@ -229,45 +229,21 @@ const HydroSurveys = () => {
               </CardContent>
             </Card>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-green-600">Success Guarantee</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4">
-                    Our surveys come with a 95% success rate guarantee. If water is not found at the recommended location within the specified depth, we provide:
-                  </p>
-                  <ul className="space-y-2 text-sm">
-                    <li>• Alternative site recommendations</li>
-                    <li>• Partial refund options</li>
-                    <li>• Re-survey at reduced cost</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-blue-600">Survey Pricing</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
-                      <span>Basic Survey (up to 2 acres):</span>
-                      <span className="font-semibold">KSh 25,000</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Standard Survey (2-10 acres):</span>
-                      <span className="font-semibold">KSh 45,000</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Comprehensive Survey (10+ acres):</span>
-                      <span className="font-semibold">KSh 75,000</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-green-600">Success Guarantee</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Our surveys come with a 95% success rate guarantee. If water is not found at the recommended location within the specified depth, we provide:
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li>• Alternative site recommendations</li>
+                  <li>• Partial refund options</li>
+                  <li>• Re-survey at reduced cost</li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

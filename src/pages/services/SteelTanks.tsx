@@ -248,60 +248,6 @@ const SteelTanks = () => {
         </div>
       </section>
 
-      {/* Pricing Guide */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Pricing Guide</h2>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-center">10,000L Tank</CardTitle>
-                <div className="text-center text-2xl font-bold text-primary">From KSh 450,000</div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm">
-                  <li>✓ Ground level installation</li>
-                  <li>✓ Basic fittings included</li>
-                  <li>✓ 2-year warranty</li>
-                  <li>✓ Ideal for small homes</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-primary border-2">
-              <CardHeader>
-                <CardTitle className="text-center text-primary">50,000L Tank</CardTitle>
-                <div className="text-center text-2xl font-bold text-primary">From KSh 1,200,000</div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm">
-                  <li>✓ Elevated or ground installation</li>
-                  <li>✓ Complete fittings package</li>
-                  <li>✓ 5-year warranty</li>
-                  <li>✓ Perfect for communities</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-center">100,000L+ Tank</CardTitle>
-                <div className="text-center text-2xl font-bold text-primary">Custom Quote</div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm">
-                  <li>✓ Custom design and size</li>
-                  <li>✓ Premium materials</li>
-                  <li>✓ 10-year warranty</li>
-                  <li>✓ Commercial applications</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gray-800 text-white">
         <div className="container mx-auto px-4 text-center">

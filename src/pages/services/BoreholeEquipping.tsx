@@ -168,66 +168,6 @@ const BoreholeEquipping = () => {
         </div>
       </section>
 
-      {/* Maintenance Plans */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Maintenance Plans</h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-center">Basic Plan</CardTitle>
-                <div className="text-center text-3xl font-bold text-primary">KSh 15,000</div>
-                <div className="text-center text-gray-600">per year</div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm">
-                  <li>✓ Quarterly inspections</li>
-                  <li>✓ Basic cleaning and lubrication</li>
-                  <li>✓ Performance monitoring</li>
-                  <li>✓ Emergency support</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-primary border-2">
-              <CardHeader>
-                <CardTitle className="text-center text-primary">Professional Plan</CardTitle>
-                <div className="text-center text-3xl font-bold text-primary">KSh 25,000</div>
-                <div className="text-center text-gray-600">per year</div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm">
-                  <li>✓ Monthly inspections</li>
-                  <li>✓ Comprehensive servicing</li>
-                  <li>✓ Component replacements</li>
-                  <li>✓ 24/7 emergency response</li>
-                  <li>✓ Performance optimization</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-center">Premium Plan</CardTitle>
-                <div className="text-center text-3xl font-bold text-primary">KSh 40,000</div>
-                <div className="text-center text-gray-600">per year</div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm">
-                  <li>✓ Bi-weekly inspections</li>
-                  <li>✓ Full system overhauls</li>
-                  <li>✓ All parts included</li>
-                  <li>✓ Priority emergency response</li>
-                  <li>✓ System upgrades</li>
-                  <li>✓ Remote monitoring</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-accent text-white">
         <div className="container mx-auto px-4 text-center">
