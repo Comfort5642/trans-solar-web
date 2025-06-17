@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -8,6 +7,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Badge } from '@/components/ui/badge';
 import { Menu, X, Phone, Mail, MapPin, Droplets, Wrench, Settings, Battery, Building, Search, MessageCircle, Star, ChevronDown, Shield, Award, Clock, Users } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import Gallery from '@/components/Gallery';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,31 +48,36 @@ const Index = () => {
       icon: <Droplets className="h-8 w-8" />,
       title: "Borehole Drilling",
       description: "Professional water borehole drilling with modern equipment and experienced technicians.",
-      features: ["Modern drilling rigs", "Depth up to 300m", "Water quality testing"]
+      features: ["Modern drilling rigs", "Depth up to 300m", "Water quality testing"],
+      link: "/services/borehole-drilling"
     },
     {
       icon: <Battery className="h-8 w-8" />,
       title: "Solar Pump Installation", 
       description: "Eco-friendly solar-powered water pumping systems for sustainable water access.",
-      features: ["Energy efficient", "Low maintenance", "Remote monitoring"]
+      features: ["Energy efficient", "Low maintenance", "Remote monitoring"],
+      link: "/services/solar-pumps"
     },
     {
       icon: <Wrench className="h-8 w-8" />,
       title: "Borehole Equipping & Maintenance",
       description: "Complete borehole setup and ongoing maintenance services to ensure optimal performance.",
-      features: ["24/7 support", "Preventive maintenance", "Emergency repairs"]
+      features: ["24/7 support", "Preventive maintenance", "Emergency repairs"],
+      link: "/services/borehole-equipping"
     },
     {
       icon: <Building className="h-8 w-8" />,
       title: "Elevated Steel Tank Construction",
       description: "Durable steel water storage tanks designed to meet your capacity needs.",
-      features: ["Custom sizes", "Corrosion resistant", "10-year warranty"]
+      features: ["Custom sizes", "Corrosion resistant", "10-year warranty"],
+      link: "/services/steel-tanks"
     },
     {
       icon: <Search className="h-8 w-8" />,
       title: "Hydro-Geological Surveys",
       description: "Professional ground water surveys to identify the best drilling locations.",
-      features: ["GPS mapping", "Detailed reports", "Success guarantee"]
+      features: ["GPS mapping", "Detailed reports", "Success guarantee"],
+      link: "/services/hydro-surveys"
     }
   ];
 
@@ -394,8 +400,10 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button variant="ghost" className="mt-6 p-0 h-auto font-bold text-primary hover:text-primary/80">
-                    Learn More →
+                  <Button variant="ghost" className="mt-6 p-0 h-auto font-bold text-primary hover:text-primary/80" asChild>
+                    <Link to={service.link}>
+                      Learn More →
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -403,6 +411,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Gallery Section */}
+      <Gallery />
 
       {/* Projects Section */}
       <section id="projects" className="py-20 bg-gray-50">
