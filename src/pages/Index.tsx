@@ -118,15 +118,15 @@ const Index = () => {
       name: "John Kamau",
       location: "Machakos County", 
       company: "Machakos Water Committee",
-      text: "Outstanding service from consultation to completion. Our community now has reliable water access thanks to their expert drilling. Highly recommended!",
-      rating: 5,
+      text: "Reliable water supply for our entire community! The drilling was completed ahead of schedule and within budget. We've had zero issues in the past two years.",
+      rating: 4.5,
       verified: true
     },
     {
       name: "Grace Akinyi",
       location: "Nakuru County",
       company: "Akinyi Enterprises",
-      text: "Excellent work on our borehole maintenance and solar installation. The team is knowledgeable, punctual, and very reliable. Great value for money!",
+      text: "Quick response time and excellent maintenance service. When our pump had issues, they fixed it the same day. Great customer support and fair pricing!",
       rating: 5,
       verified: true
     }
@@ -169,6 +169,7 @@ const Index = () => {
               <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-primary transition-colors font-medium">About Us</button>
               <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-primary transition-colors font-medium">Services</button>
               <button onClick={() => scrollToSection('projects')} className="text-gray-700 hover:text-primary transition-colors font-medium">Projects</button>
+              <Link to="/brochure" className="text-gray-700 hover:text-primary transition-colors font-medium">Brochure</Link>
               <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-primary transition-colors font-medium">Contact</button>
             </nav>
 
@@ -203,6 +204,7 @@ const Index = () => {
                 <button onClick={() => scrollToSection('about')} className="text-left text-gray-700 hover:text-primary py-2 font-medium">About Us</button>
                 <button onClick={() => scrollToSection('services')} className="text-left text-gray-700 hover:text-primary py-2 font-medium">Services</button>
                 <button onClick={() => scrollToSection('projects')} className="text-left text-gray-700 hover:text-primary py-2 font-medium">Projects</button>
+                <Link to="/brochure" className="text-left text-gray-700 hover:text-primary py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Brochure</Link>
                 <button onClick={() => scrollToSection('contact')} className="text-left text-gray-700 hover:text-primary py-2 font-medium">Contact</button>
                 <div className="flex items-center space-x-3 pt-3 border-t">
                   <Button size="sm" asChild>
@@ -400,7 +402,7 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button variant="ghost" className="mt-6 p-0 h-auto font-bold text-primary hover:text-primary/80" asChild>
+                  <Button variant="ghost" className="mt-6 p-0 h-auto font-bold text-primary hover:text-primary/80 hover:bg-primary/10 hover:scale-105 transition-all duration-300 px-4 py-2 rounded-lg" asChild>
                     <Link to={service.link}>
                       Learn More →
                     </Link>
@@ -485,9 +487,18 @@ const Index = () => {
                 <CardContent className="p-8">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                      {[...Array(5)].map((_, i) => (
+                        <Star 
+                          key={i} 
+                          className={`h-5 w-5 ${i < Math.floor(testimonial.rating) ? 'text-yellow-400 fill-current' : i < testimonial.rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
+                        />
                       ))}
+                      {testimonial.rating % 1 !== 0 && (
+                        <div className="relative">
+                          <Star className="h-5 w-5 text-gray-300 absolute" />
+                          <Star className="h-5 w-5 text-yellow-400 fill-current" style={{ clipPath: 'inset(0 50% 0 0)' }} />
+                        </div>
+                      )}
                     </div>
                     {testimonial.verified && (
                       <Badge variant="outline" className="text-green-600 border-green-600">
