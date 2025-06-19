@@ -22,14 +22,52 @@ const Index = () => {
   });
   const { toast } = useToast();
 
+  const sendToWhatsApp = () => {
+    const { fullName, phone, email, service, location, message } = formData;
+    
+    // Create a formatted message with all the form data
+    let whatsappMessage = `Hello Trans Solar Boreholes, I would like to request a free quote.\n\n`;
+    whatsappMessage += `📋 *Contact Details:*\n`;
+    whatsappMessage += `Name: ${fullName || 'Not provided'}\n`;
+    whatsappMessage += `Phone: ${phone || 'Not provided'}\n`;
+    whatsappMessage += `Email: ${email || 'Not provided'}\n`;
+    whatsappMessage += `Location: ${location || 'Not provided'}\n\n`;
+    whatsappMessage += `🔧 *Service Required:* ${service || 'Not specified'}\n\n`;
+    if (message) {
+      whatsappMessage += `💬 *Additional Details:*\n${message}\n\n`;
+    }
+    whatsappMessage += `Please provide me with a detailed quote. Thank you!`;
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // Open WhatsApp with the pre-filled message
+    const whatsappUrl = `https://wa.me/254729319889?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate required fields
+    if (!formData.fullName || !formData.phone || !formData.service || !formData.location) {
+      toast({
+        title: "Please fill in required fields",
+        description: "Name, Phone, Service, and Location are required to send your quote request.",
+        variant: "destructive"
+      });
+      return;
+    }
+
     console.log('Form submission:', formData);
     
-    // Simulate form submission
+    // Send to WhatsApp
+    sendToWhatsApp();
+    
+    // Show success message
     toast({
-      title: "Quote Request Sent!",
-      description: "We'll contact you within 24 hours. Thank you for choosing Trans Solar Boreholes!",
+      title: "Redirecting to WhatsApp",
+      description: "Your quote request details are being sent via WhatsApp.",
     });
     
     // Reset form
